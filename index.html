@@ -9,31 +9,70 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div id="tenki-logo">Tenki</div>
-      <div id="navbar-toggles">
-        <label class="switch" id="darkmode">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-        <label class="switch" id="measure-unit">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-      </div>
+    <div id="navbar">
+      <nav class="navbar">
+        <div id="tenki-logo">Tenki</div>
+        
+        <!-- Hidden until user searches for a city first-->
+        <div id="navbar-search" class="hidden">
+          <input type="text" placeholder="Search another city"/>
+          <button>Search</button>
+        </div>
 
-      <!-- This will be hidden until user searches for a city first-->
-      <div id="navbar-search" class="hidden">
-        <input type="text" placeholder="Search another city" />
-        <button>Search</button>
-      </div>
-    </nav>
+        <div id="navbar-toggles">
+          <label class="switch" id="darkmode">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <label class="switch" id="measure-unit">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+      
+      </nav>
+    </div>
   </header>
   <main role="main">
-    <article>
-      <h2>City name</h2>
+    <!-- Show this first -->
+    <section id="home-view">
+      <div class="search-box">
+      <input type="text" placeholder="Enter a city" />
+      <button>Search</button>
+    </div>
+    </section>
+    <!-- Show this after search-->
+    <section id="forecast-view" class="hidden">
+    <div class="weather"> 
+      <div class="city-info">
+          <h2>City name</h2>
+          <h3>Country name</h3>
+          <h4>Current time</h4>
+        </div>
+        <div class="forecast-card">
+        
+        </div>
+        <div class="forecast-card">
 
-    </article>
+        </div>
+        <div class="forecast-card">
+
+        </div>
+        <div class="forecast-card">
+
+        </div>
+        <div class="forecast-card">
+
+        </div>
+        <div class="forecast-card">
+
+        </div>
+      </div>
+    </section>
   </main>
+  <footer>
+  <p>Made by Leo 🌤️ | Powered by OpenWeatherMap</p>
+  </footer>
 </body>
 </html>
