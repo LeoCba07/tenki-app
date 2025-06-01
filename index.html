@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenki - Weather Forecast</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div id="tenki-logo">Tenki</div>
+      <div id="navbar-toggles">
+        <label class="switch" id="darkmode">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch" id="measure-unit">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <!-- This will be hidden until user searches for a city first-->
+      <div id="navbar-search" class="hidden">
+        <input type="text" placeholder="Search another city" />
+        <button>Search</button>
+      </div>
+    </nav>
+  </header>
+  <main role="main">
+    <article>
+      <h2>City name</h2>
+
+    </article>
+  </main>
+</body>
+</html>
