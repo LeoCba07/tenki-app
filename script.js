@@ -1,3 +1,13 @@
+import { API_KEY } from './config.js';
+
+const city = "Tokyo";
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error:", error));
+  
 document.addEventListener("DOMContentLoaded", () => {
   const darkToggle = document.getElementById("darkmode-checkbox");
   const unitToggle = document.getElementById("unit-checkbox");
@@ -15,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     alert(`Switched to ${isMetric ? "Celsius (°C)" : "Fahrenheit (°F)"}`);
   });
 
-  // Optional: Load saved preferences
+  // Load saved preferences
   const savedUnit = localStorage.getItem("unit");
   if (savedUnit === "imperial") unitToggle.checked = true;
 
@@ -23,3 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   darkToggle.checked = isDark;
   if (isDark) document.body.classList.add("dark-mode");
 });
+
+// var citySearch = document.getElementById("city-input");
+// var searchBtn = document.getElementById("search-btn");
+

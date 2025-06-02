@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tenki</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
-  <script src="config.js"></script>
+  <script type="module" src="script.js"></script>
+  <!--OpenWeatherMap API-->
+  <script type="module" src="config.js"></script>
   <link rel="icon" type="image/png" href="/tenki-app/resources/favicon.ico" sizes="96x96" />
 </head>
 <body>
@@ -15,12 +16,13 @@
       <nav class="navbar">
         <div class="logo-container"><a href="/tenki-app/index.html"><img src="resources/tenki-logo.png" class="tenki-img"></a></div>
         
-        <!-- Hidden until user searches for a city first-->
+        <!-- SearchNavbar is hidden until user searches for a city first-->
         <div id="navbar-search" class="hidden">
           <input type="text" placeholder="Search another city"/>
           <button>Search</button>
         </div>
 
+        <!-- Dark mode & Unit toggle-->
         <div id="navbar-toggles">
           <label class="switch" id="darkmode">
             <input type="checkbox" id="darkmode-checkbox" aria-label="Toggle Dark Mode">
@@ -43,9 +45,9 @@
         <h1 id="main-title">天気 Tenki</h1>
         <h5 id="subtitle">Your trustworthy weather forecast app</h5>
       </div>
-      <div class="search-box">
-      <input type="text" placeholder="Enter a city" />
-      <button>Search</button>
+      <div class="search-box" >
+      <input type="text" placeholder="Enter a city" id="city-input"/>
+      <button id="search-btn">Search</button>
     </div>
     </section>
     <!-- Show this after search-->

@@ -52,10 +52,13 @@ main {
 }
 
 #navbar-search {
-  display: flex;
   gap: 0.5rem;
   flex: 1;
   justify-content: center;
+}
+
+#navbar-search:active {
+  display: flex;
 }
 
 #navbar-search input {
