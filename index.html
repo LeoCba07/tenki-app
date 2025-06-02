@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenki - Weather Forecast</title>
+  <title>Tenki</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js"></script>
+  <script src="config.js"></script>
+  <link rel="icon" type="image/png" href="/tenki-app/resources/favicon.ico" sizes="96x96" />
 </head>
 <body>
   <header>
     <div id="navbar">
       <nav class="navbar">
-        <div id="tenki-logo">Tenki</div>
+        <div class="logo-container"><a href="/tenki-app/index.html"><img src="resources/tenki-logo.png" class="tenki-img"></a></div>
         
         <!-- Hidden until user searches for a city first-->
         <div id="navbar-search" class="hidden">
@@ -21,11 +23,11 @@
 
         <div id="navbar-toggles">
           <label class="switch" id="darkmode">
-            <input type="checkbox">
+            <input type="checkbox" id="darkmode-checkbox" aria-label="Toggle Dark Mode">
             <span class="slider round"></span>
           </label>
-          <label class="switch" id="measure-unit">
-            <input type="checkbox">
+          <label class="switch" id="unit-toggle" aria-label="Toggle Temperature Unit">
+            <input type="checkbox" id="unit-checkbox">
             <span class="slider round"></span>
           </label>
         </div>
@@ -37,6 +39,10 @@
   <main role="main">
     <!-- Show this first -->
     <section id="home-view">
+      <div class="title-container">
+        <h1 id="main-title">天気 Tenki</h1>
+        <h5 id="subtitle">Your trustworthy weather forecast app</h5>
+      </div>
       <div class="search-box">
       <input type="text" placeholder="Enter a city" />
       <button>Search</button>
@@ -72,7 +78,7 @@
     </section>
   </main>
   <footer>
-  <p>Made by Leo 🌤️ | Powered by OpenWeatherMap</p>
+  <p>Made by LeoCba 🌤️ | Powered by OpenWeatherMap</p>
   </footer>
 </body>
 </html>
