@@ -144,10 +144,81 @@ input:checked + .slider:before {
 
 #forecast-view:not(.hidden) {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   padding: 2rem 1rem;
+}
+
+/* NEW: Current Weather Styles */
+.current-weather {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.current-weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#current-weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.current-temp-container {
+  text-align: center;
+}
+
+#current-temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4A90E2;
+  display: block;
+}
+
+#current-description {
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: capitalize;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.current-weather-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 10px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #4A90E2;
+}
+
+/* Forecast Title */
+.forecast-title {
+  color: #4A90E2;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 /* Forecast Cards */
@@ -273,4 +344,32 @@ body.dark-mode .forecast-card img {
   filter: drop-shadow(0 2px 8px white);
 }
 
+body.dark-mode .current-weather-main img {
+  filter: drop-shadow(0 2px 8px white);
+}
 
+/* Dark mode styles for current weather */
+body.dark-mode .current-weather {
+  background: linear-gradient(145deg, #2a2b33, #1e1f26);
+  color: #f1f1f1;
+}
+
+body.dark-mode #current-temperature {
+  color: #FFE66D;
+}
+
+body.dark-mode #current-description {
+  color: #ddd;
+}
+
+body.dark-mode .detail-item {
+  background-color: rgba(255, 230, 109, 0.1);
+}
+
+body.dark-mode .detail-label {
+  color: #FFE66D;
+}
+
+body.dark-mode .forecast-title {
+  color: #FFE66D;
+}
