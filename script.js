@@ -43,10 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
   locationBtn.addEventListener("click", handleGeolocation);
   unitToggle.addEventListener("change", handleUnitToggle);
   darkToggle.addEventListener("change", handleDarkToggle);
-  capitalLink.addEventListener("click", () => {
-    const capital = capitalLink.textContent;
-    if (capital) fetchWeather(capital);
-  });
 
   // === INIT ===
   applyInitialPreferences();

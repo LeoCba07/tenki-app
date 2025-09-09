@@ -7,7 +7,7 @@
 
         html, body {
             height: 100%;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: "Twemoji Country Flags",'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -71,12 +71,18 @@
             gap: 0.5rem;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #667eea;
+            color: #667eea; 
         }
 
         .logo-emoji {
             font-size: 2rem;
             animation: bounce 2s infinite;
+        }
+
+        .logo-text {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
         }
 
         @keyframes bounce {
@@ -118,6 +124,7 @@
             color: #667eea;
             margin-left: 0.5rem;
             font-size: 1.2rem;
+            cursor: pointer;
         }
 
         #city-input {
@@ -293,14 +300,8 @@
             color: #333;
         }
 
-        .country-flag {
+        #country-flag {
             font-size: 2rem;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .country-flag:hover {
-            transform: scale(1.2);
         }
 
         .country-info {
@@ -317,16 +318,7 @@
         }
 
         .capital-link {
-            color: #667eea;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
             font-weight: 600;
-        }
-
-        .capital-link:hover {
-            color: #764ba2;
-            text-decoration: underline;
         }
 
         #current-time {
@@ -561,6 +553,8 @@
         body.dark-mode .city-info,
         body.dark-mode .current-weather,
         body.dark-mode .today-forecast,
+        body.dark-mode .logo-text,
+        body.dark-mode .forecast-desc,
         body.dark-mode .forecast-card {
             background: rgba(26, 26, 46, 0.95);
             color: #f1f1f1;
@@ -572,6 +566,7 @@
         }
 
         body.dark-mode .detail-label,
+        body.dark-mode .detail-value,
         body.dark-mode .forecast-title,
         body.dark-mode .hourly-time {
             color: #FFE66D;
@@ -670,16 +665,6 @@
 #country-name,
 #capital-link {
   display: inline;
-}
-
-.capital-link {
-  cursor: pointer;
-  color: #667eea;
-  text-decoration: underline;
-}
-
-.capital-link:hover {
-  color: #764ba2;
 }
 
 .country-info {
