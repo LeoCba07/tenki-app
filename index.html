@@ -8,13 +8,17 @@
     <script type="module" src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="resources/favicon.ico" sizes="96x96" />
+    <script type="module" defer>
+    import { polyfillCountryFlagEmojis } from "https://cdn.skypack.dev/country-flag-emoji-polyfill";
+    polyfillCountryFlagEmojis();
+    </script>
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo-container">
         <span class="logo-emoji">🌤️</span>
-        <span class="logo-text">天気 Tenki</span>
+        <a href="\index.html" class="logo-text">天気 Tenki</a>
       </div>
 
       <div id="navbar-search-placeholder"></div>
@@ -62,7 +66,7 @@
       <div class="city-info">
         <div class="city-header">
           <h2 id="city-name"></h2>
-          <span id="country-flag" title="Click to get capital city weather" style="cursor:pointer"></span>
+          <span id="country-flag" title="Click to get capital city weather"></span>
         </div>
         <div class="country-info">
           <span id="country-name"></span>
