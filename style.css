@@ -249,7 +249,7 @@
         #main-title {
             font-size: 7rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #354cb3, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -594,6 +594,10 @@
 
         body.dark-mode #city-input::placeholder {
             color: #aaa;
+        }
+
+        body.dark-mode #github-link {
+            color: #9a8ac0;
         }
 
         body.dark-mode #main-title {
