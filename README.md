@@ -2,8 +2,6 @@
 
 A weather app that shows current conditions and forecasts for cities around the world.
 
-🔗 **Live:** [Add live URL if deployed]
-
 ## Features
 
 - **Current weather** — temperature, humidity, wind speed
